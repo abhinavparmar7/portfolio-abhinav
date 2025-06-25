@@ -21,27 +21,72 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_70%)] animate-pulse"></div>
       
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
+          backgroundSize: '50px 50px',
+          animation: 'grid-float 20s ease-in-out infinite'
+        }}></div>
+      </div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float-particle ${5 + Math.random() * 10}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          ></div>
+        ))}
+      </div>
+
       {/* Enhanced Neural Network Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-300"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse delay-700"></div>
         <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-2/3 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-1/6 right-2/3 w-1 h-1 bg-cyan-500 rounded-full animate-pulse delay-2000"></div>
         
         {/* Animated Lines */}
         <div className="absolute top-1/4 left-1/4 w-32 h-0.5 bg-gradient-to-r from-cyan-400/30 to-transparent transform rotate-45 animate-pulse delay-500"></div>
         <div className="absolute top-1/2 right-1/3 w-24 h-0.5 bg-gradient-to-l from-blue-400/30 to-transparent transform -rotate-45 animate-pulse delay-1200"></div>
+        <div className="absolute top-2/3 left-1/2 w-28 h-0.5 bg-gradient-to-r from-purple-400/30 to-transparent transform rotate-12 animate-pulse delay-1800"></div>
+        <div className="absolute top-1/6 right-1/2 w-20 h-0.5 bg-gradient-to-l from-cyan-500/30 to-transparent transform -rotate-30 animate-pulse delay-2400"></div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Elements with Enhanced Animation */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-4 h-4 border border-cyan-400/30 rounded-full animate-bounce delay-300"></div>
         <div className="absolute bottom-32 right-16 w-6 h-6 border border-blue-400/30 rounded-full animate-bounce delay-700"></div>
         <div className="absolute top-1/3 right-20 w-3 h-3 border border-cyan-300/30 rounded-full animate-bounce delay-1000"></div>
+        <div className="absolute top-1/2 left-20 w-5 h-5 border border-purple-400/30 rounded-full animate-bounce delay-1300"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 border border-blue-500/30 rounded-full animate-bounce delay-1600"></div>
+      </div>
+
+      {/* Animated Geometric Shapes */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-1/4 right-1/4 w-16 h-16 border border-cyan-400/50 transform rotate-45 animate-spin-slow"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-blue-400/50 transform rotate-12 animate-reverse-spin"></div>
+        <div className="absolute top-2/3 right-1/3 w-8 h-8 border border-purple-400/50 transform -rotate-30 animate-spin-slow delay-1000"></div>
+      </div>
+
+      {/* Pulsing Orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/5 left-1/5 w-32 h-32 bg-cyan-400/5 rounded-full animate-pulse-scale"></div>
+        <div className="absolute bottom-1/4 right-1/5 w-24 h-24 bg-blue-400/5 rounded-full animate-pulse-scale delay-1000"></div>
+        <div className="absolute top-1/2 left-2/3 w-20 h-20 bg-purple-400/5 rounded-full animate-pulse-scale delay-2000"></div>
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
