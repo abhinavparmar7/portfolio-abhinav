@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
+import FuturisticEffects from './FuturisticEffects';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
@@ -20,99 +21,124 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_70%)] animate-pulse"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden perspective-container">
+      {/* Futuristic Background Effects */}
+      <FuturisticEffects />
       
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
-          backgroundSize: '50px 50px',
-          animation: 'grid-float 20s ease-in-out infinite'
+      {/* Enhanced Matrix Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black matrix-bg"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.15),transparent_70%)] animate-electromagnetic"></div>
+      
+      {/* Holographic Grid Pattern */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0 cyberpunk-glow" style={{
+          backgroundImage: `
+            linear-gradient(rgba(6,182,212,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6,182,212,0.1) 1px, transparent 1px),
+            radial-gradient(circle at 50% 50%, rgba(59,130,246,0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px, 50px 50px, 25px 25px',
+          animation: 'grid-float 20s ease-in-out infinite, hologram-glitch 5s ease-in-out infinite'
         }}></div>
       </div>
 
-      {/* Floating Particles */}
+      {/* Advanced Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => (
+        {[...Array(25)].map((_, i) => (
           <div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+            key={`particle-${i}`}
+            className="absolute rounded-full cyberpunk-glow animate-quantum-particles"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float-particle ${5 + Math.random() * 10}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`
+              width: `${2 + Math.random() * 4}px`,
+              height: `${2 + Math.random() * 4}px`,
+              background: `rgba(${Math.random() > 0.5 ? '6,182,212' : '59,130,246'}, 0.7)`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`
             }}
           ></div>
         ))}
       </div>
 
-      {/* Enhanced Neural Network Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-300"></div>
-        <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse delay-700"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-2/3 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-1500"></div>
-        <div className="absolute top-1/6 right-2/3 w-1 h-1 bg-cyan-500 rounded-full animate-pulse delay-2000"></div>
+      {/* Ultra-Enhanced Neural Network */}
+      <div className="absolute inset-0 opacity-30">
+        {/* Main Nodes */}
+        <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-cyan-400 rounded-full animate-neural-pulse cyberpunk-glow"></div>
+        <div className="absolute top-3/4 right-1/4 w-4 h-4 bg-blue-400 rounded-full animate-neural-pulse cyberpunk-glow" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-1/2 left-3/4 w-5 h-5 bg-purple-400 rounded-full animate-neural-pulse cyberpunk-glow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-pink-400 rounded-full animate-neural-pulse cyberpunk-glow" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-2/3 left-1/3 w-5 h-5 bg-emerald-400 rounded-full animate-neural-pulse cyberpunk-glow" style={{animationDelay: '2s'}}></div>
         
-        {/* Animated Lines */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-0.5 bg-gradient-to-r from-cyan-400/30 to-transparent transform rotate-45 animate-pulse delay-500"></div>
-        <div className="absolute top-1/2 right-1/3 w-24 h-0.5 bg-gradient-to-l from-blue-400/30 to-transparent transform -rotate-45 animate-pulse delay-1200"></div>
-        <div className="absolute top-2/3 left-1/2 w-28 h-0.5 bg-gradient-to-r from-purple-400/30 to-transparent transform rotate-12 animate-pulse delay-1800"></div>
-        <div className="absolute top-1/6 right-1/2 w-20 h-0.5 bg-gradient-to-l from-cyan-500/30 to-transparent transform -rotate-30 animate-pulse delay-2400"></div>
+        {/* Connecting Lines with Animation */}
+        <svg className="absolute inset-0 w-full h-full" style={{animation: 'hologram-glitch 3s ease-in-out infinite'}}>
+          <defs>
+            <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(6,182,212,0.6)" />
+              <stop offset="50%" stopColor="rgba(59,130,246,0.8)" />
+              <stop offset="100%" stopColor="rgba(147,51,234,0.6)" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge> 
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <line x1="25%" y1="25%" x2="75%" y2="50%" stroke="url(#lineGradient1)" strokeWidth="2" filter="url(#glow)" className="animate-data-stream" />
+          <line x1="75%" y1="75%" x2="33%" y2="67%" stroke="url(#lineGradient1)" strokeWidth="2" filter="url(#glow)" className="animate-data-stream" style={{animationDelay: '1s'}} />
+          <line x1="50%" y1="50%" x2="67%" y2="33%" stroke="url(#lineGradient1)" strokeWidth="2" filter="url(#glow)" className="animate-data-stream" style={{animationDelay: '2s'}} />
+        </svg>
       </div>
 
-      {/* Floating Elements with Enhanced Animation */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-4 h-4 border border-cyan-400/30 rounded-full animate-bounce delay-300"></div>
-        <div className="absolute bottom-32 right-16 w-6 h-6 border border-blue-400/30 rounded-full animate-bounce delay-700"></div>
-        <div className="absolute top-1/3 right-20 w-3 h-3 border border-cyan-300/30 rounded-full animate-bounce delay-1000"></div>
-        <div className="absolute top-1/2 left-20 w-5 h-5 border border-purple-400/30 rounded-full animate-bounce delay-1300"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 border border-blue-500/30 rounded-full animate-bounce delay-1600"></div>
+      {/* 3D Geometric Elements */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-20 left-10 w-12 h-12 neon-border animate-cube-3d rotate-3d"></div>
+        <div className="absolute bottom-32 right-16 w-16 h-16 neon-border animate-cube-3d rotate-3d" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 right-20 w-8 h-8 neon-border animate-cube-3d rotate-3d" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-20 w-14 h-14 neon-border animate-cube-3d rotate-3d" style={{animationDelay: '3s'}}></div>
       </div>
 
-      {/* Animated Geometric Shapes */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-1/4 right-1/4 w-16 h-16 border border-cyan-400/50 transform rotate-45 animate-spin-slow"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-blue-400/50 transform rotate-12 animate-reverse-spin"></div>
-        <div className="absolute top-2/3 right-1/3 w-8 h-8 border border-purple-400/50 transform -rotate-30 animate-spin-slow delay-1000"></div>
+      {/* Morphing Geometric Shapes */}
+      <div className="absolute inset-0 pointer-events-none opacity-25">
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 animate-morph-shape cyberpunk-glow"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 bg-gradient-to-r from-purple-400/20 to-pink-400/20 animate-morph-shape cyberpunk-glow" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-2/3 right-1/3 w-16 h-16 bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 animate-morph-shape cyberpunk-glow" style={{animationDelay: '4s'}}></div>
       </div>
 
-      {/* Pulsing Orbs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/5 left-1/5 w-32 h-32 bg-cyan-400/5 rounded-full animate-pulse-scale"></div>
-        <div className="absolute bottom-1/4 right-1/5 w-24 h-24 bg-blue-400/5 rounded-full animate-pulse-scale delay-1000"></div>
-        <div className="absolute top-1/2 left-2/3 w-20 h-20 bg-purple-400/5 rounded-full animate-pulse-scale delay-2000"></div>
+      {/* Electromagnetic Field Visualizations */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-1/5 left-1/5 w-40 h-40 animate-electromagnetic"></div>
+        <div className="absolute bottom-1/4 right-1/5 w-32 h-32 animate-electromagnetic" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-2/3 w-28 h-28 animate-electromagnetic" style={{animationDelay: '2s'}}></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transform hover:scale-105 transition-transform duration-300">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
+      {/* Main Content with Holographic Effects */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto perspective-container">
+        <div className="mb-8 rotate-3d">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transform hover:scale-105 transition-all duration-500 perspective-container">
+            <span className="holographic-text animate-holo-text cyberpunk-glow">
               {text}
             </span>
-            <span className="animate-pulse">|</span>
+            <span className="animate-pulse text-cyan-400">|</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto opacity-0 animate-[fade-in_0.8s_ease-out_0.5s_forwards]">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto opacity-0 animate-[holo-text_1.5s_ease-out_0.5s_forwards] cyberpunk-glow">
             Crafting intelligent solutions with Python and cutting-edge AI technologies. 
             Building the future, one algorithm at a time.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-[fade-in_0.8s_ease-out_1s_forwards]">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-[holo-text_1.5s_ease-out_1s_forwards]">
             <a
               href="#projects"
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-1"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/50 hover:-translate-y-2 cyberpunk-glow neon-border animate-neural-pulse"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+              className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 cyberpunk-glow neon-border animate-hologram-glitch"
             >
               Get In Touch
             </a>
@@ -120,11 +146,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center space-y-2">
+      {/* Ultra-Enhanced Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce perspective-container">
+        <div className="flex flex-col items-center space-y-2 cyberpunk-glow animate-neural-pulse">
           <ArrowDown className="text-cyan-400 animate-pulse" size={24} />
-          <div className="w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent animate-pulse"></div>
+          <div className="w-0.5 h-8 bg-gradient-to-b from-cyan-400 via-blue-400 to-purple-400 animate-data-stream"></div>
+          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-quantum-particles"></div>
         </div>
       </div>
     </section>
