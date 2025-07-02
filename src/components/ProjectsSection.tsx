@@ -39,14 +39,14 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-background to-muted/20 transition-colors duration-300">
+    <section id="projects" className="py-20 bg-gradient-to-b from-black to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent transform hover:scale-105 transition-transform duration-300">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 animate-[scale-x_1s_ease-out]"></div>
-          <p className="text-foreground/70 text-lg max-w-3xl mx-auto opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto opacity-0 animate-[fade-in_0.8s_ease-out_0.3s_forwards]">
             A showcase of my work in AI development, API design, and full-stack applications
           </p>
         </div>
@@ -55,7 +55,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-card/50 to-muted/30 rounded-xl border border-cyan-500/20 backdrop-blur-sm overflow-hidden hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_${index * 0.2}s_forwards] ${
+              className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-cyan-500/20 backdrop-blur-sm overflow-hidden hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_${index * 0.2}s_forwards] ${
                 project.featured ? 'lg:col-span-1' : ''
               }`}
             >
@@ -66,11 +66,11 @@ const ProjectsSection = () => {
               )}
 
               <div className="p-6 relative z-10">
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-cyan-400 transition-all duration-300 transform group-hover:translate-x-2">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-all duration-300 transform group-hover:translate-x-2">
                   {project.title}
                 </h3>
                 
-                <p className="text-foreground/80 mb-4 leading-relaxed group-hover:text-foreground/90 transition-colors duration-300">
+                <p className="text-gray-300 mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                   {project.description}
                 </p>
                 
@@ -78,7 +78,7 @@ const ProjectsSection = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-muted/50 text-muted-foreground rounded-lg text-sm border border-border hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-110 hover:bg-cyan-500/10 hover:text-cyan-400"
+                      className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-lg text-sm border border-gray-600/50 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-110 hover:bg-cyan-500/10 hover:text-cyan-400"
                     >
                       {tech}
                     </span>
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
                 <div className="flex gap-4">
                   <a
                     href={project.github}
-                    className="flex items-center gap-2 px-4 py-2 bg-muted/50 text-muted-foreground rounded-lg hover:bg-muted/70 hover:text-foreground transition-all duration-300 border border-border hover:border-muted-foreground transform hover:scale-105 hover:-translate-y-1"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-600/50 hover:text-white transition-all duration-300 border border-gray-600/50 hover:border-gray-500 transform hover:scale-105 hover:-translate-y-1"
                   >
                     <Github size={16} />
                     Code

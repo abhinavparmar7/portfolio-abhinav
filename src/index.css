@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,13 +45,6 @@
     --sidebar-accent-foreground: 15 23 42;
     --sidebar-border: 226 232 240;
     --sidebar-ring: 59 130 246;
-
-    /* Custom text color variables */
-    --text-primary: 15 23 42;
-    --text-secondary: 71 85 105;
-    --text-muted: 100 116 139;
-    --heading-primary: 15 23 42;
-    --heading-secondary: 34 211 238;
   }
 
   .dark {
@@ -90,13 +84,6 @@
     --sidebar-accent-foreground: 203 213 225;
     --sidebar-border: 30 41 59;
     --sidebar-ring: 34 211 238;
-
-    /* Custom text color variables for dark mode */
-    --text-primary: 255 255 255;
-    --text-secondary: 203 213 225;
-    --text-muted: 148 163 184;
-    --heading-primary: 255 255 255;
-    --heading-secondary: 34 211 238;
   }
 }
 
@@ -113,27 +100,6 @@
 
   html {
     scroll-behavior: smooth;
-  }
-
-  /* Enhanced text color classes */
-  .text-primary {
-    color: rgb(var(--text-primary));
-  }
-
-  .text-secondary {
-    color: rgb(var(--text-secondary));
-  }
-
-  .text-muted {
-    color: rgb(var(--text-muted));
-  }
-
-  .heading-primary {
-    color: rgb(var(--heading-primary));
-  }
-
-  .heading-secondary {
-    color: rgb(var(--heading-secondary));
   }
 }
 
