@@ -12,8 +12,8 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto animate-[scale-x_1s_ease-out]"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-[slide-in-left_0.8s_ease-out]">
+        <div className="grid lg:grid-cols-3 gap-12 items-center">
+          <div className="lg:col-span-2 space-y-6 animate-[slide-in-left_0.8s_ease-out]">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
               <h3 className="text-2xl font-semibold text-cyan-400 mb-4 transform hover:translate-x-2 transition-transform duration-300">Python & GenAI Developer</h3>
               <p className="text-gray-300 leading-relaxed mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
@@ -33,7 +33,20 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="space-y-6 animate-[slide-in-right_0.8s_ease-out]">
+          <div className="flex justify-center animate-[slide-in-right_0.8s_ease-out]">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 p-2 rounded-xl border border-cyan-500/20 backdrop-blur-sm">
+                <img 
+                  src="/api/placeholder/300/400" 
+                  alt="Your Name - Python & GenAI Developer"
+                  className="w-full h-96 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6 animate-[slide-in-right_0.8s_ease-out_0.2s]">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
               <h4 className="text-xl font-semibold text-cyan-400 mb-4 transform hover:translate-x-2 transition-transform duration-300">Tech Stack</h4>
               <div className="grid grid-cols-2 gap-4">
