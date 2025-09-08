@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const AboutSection = () => {
@@ -12,26 +13,7 @@ const AboutSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Image Section */}
-          <div className="flex justify-center lg:justify-start animate-[slide-in-left_0.8s_ease-out]">
-            <div className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-cyan-500/30 backdrop-blur-sm group-hover:border-cyan-400/50 transition-all duration-500">
-                <img
-                  src="/api/placeholder/400/500"
-                  alt="Abhinav Parmar - Professional Photo"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-white font-medium text-lg">Abhinav Parmar</div>
-                  <div className="text-cyan-400 text-sm">Python & GenAI Developer</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="space-y-6 animate-[slide-in-right_0.8s_ease-out]">
+          <div className="space-y-6 animate-[slide-in-left_0.8s_ease-out]">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
               <h3 className="text-2xl font-semibold text-cyan-400 mb-4 transform hover:translate-x-2 transition-transform duration-300">Python & GenAI Developer</h3>
               <p className="text-gray-300 leading-relaxed mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
@@ -49,7 +31,9 @@ const AboutSection = () => {
                 from LangChain and Hugging Face to custom model implementations and API integrations.
               </p>
             </div>
-            
+          </div>
+
+          <div className="space-y-6 animate-[slide-in-right_0.8s_ease-out]">
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
               <h4 className="text-xl font-semibold text-cyan-400 mb-4 transform hover:translate-x-2 transition-transform duration-300">Tech Stack</h4>
               <div className="grid grid-cols-2 gap-4">

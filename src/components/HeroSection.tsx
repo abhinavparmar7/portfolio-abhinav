@@ -90,21 +90,6 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        {/* Profile Image */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm">
-              <img
-                src="/api/placeholder/200/200"
-                alt="Abhinav Parmar - Python & GenAI Developer"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          </div>
-        </div>
-        
         <div className="mb-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transform hover:scale-105 transition-transform duration-300">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
