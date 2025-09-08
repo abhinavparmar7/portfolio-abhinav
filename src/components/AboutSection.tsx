@@ -14,6 +14,17 @@ const AboutSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-[slide-in-left_0.8s_ease-out]">
+            {/* Profile Image */}
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
+              <div className="relative mx-auto w-64 h-64 mb-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl opacity-20 blur-sm animate-pulse"></div>
+                <img
+                  src="/api/placeholder/300/300"
+                  alt="Profile"
+                  className="relative z-10 w-full h-full object-cover rounded-xl border-2 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
+                />
+              </div>
+            </div>
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
               <h3 className="text-2xl font-semibold text-cyan-400 mb-4 transform hover:translate-x-2 transition-transform duration-300">Python & GenAI Developer</h3>
               <p className="text-gray-300 leading-relaxed mb-4 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]">
