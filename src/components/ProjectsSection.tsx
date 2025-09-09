@@ -51,13 +51,12 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projects.slice(0, 4).map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-cyan-500/20 backdrop-blur-sm overflow-hidden hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_${index * 0.2}s_forwards] ${
-                project.featured ? 'lg:col-span-1' : ''
-              }`}
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-cyan-500/20 backdrop-blur-sm overflow-hidden hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               {project.featured && (
                 <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full animate-pulse">
