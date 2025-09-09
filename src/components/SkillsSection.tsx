@@ -5,35 +5,27 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: [
-        { name: "Python", level: 90 },
-        { name: "SQL", level: 85 },
-        { name: "JavaScript", level: 75 },
-      ]
+      skills: ["Python", "SQL", "JavaScript", "TypeScript"]
     },
     {
       title: "AI/ML Frameworks",
-      skills: [
-        { name: "LangChain", level: 85 },
-        { name: "Hugging Face", level: 80 },
-        { name: "OpenAI API", level: 90 },
-      ]
+      skills: ["LangChain", "Hugging Face", "OpenAI API", "TensorFlow"]
     },
     {
       title: "Backend Frameworks",
-      skills: [
-        { name: "FastAPI", level: 90 },
-        { name: "Flask", level: 80 },
-        { name: "Django", level: 70 },
-      ]
+      skills: ["FastAPI", "Flask", "Django", "Express.js"]
     },
     {
       title: "Databases & Tools",
-      skills: [
-        { name: "MySQL", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "Docker", level: 75 },
-      ]
+      skills: ["MySQL", "PostgreSQL", "Docker", "Redis"]
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: ["AWS", "CI/CD", "Microservices", "Kubernetes"]
+    },
+    {
+      title: "Frontend & Mobile",
+      skills: ["React", "Next.js", "Tailwind CSS", "React Native"]
     }
   ];
 
@@ -57,28 +49,21 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_${categoryIndex * 0.2}s_forwards]`}
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 opacity-0 animate-[fade-in_0.8s_ease-out_0.2s_forwards]"
+              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
               <h3 className="text-xl font-semibold text-cyan-400 mb-6 transform hover:translate-x-2 transition-transform duration-300">{category.title}</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-300">{skill.name}</span>
-                      <span className="text-gray-400 text-sm group-hover:text-cyan-300 transition-colors duration-300">{skill.level}%</span>
-                    </div>
-                    
-                    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000 ease-out transform origin-left group-hover:scale-x-105 animate-[scale-x_1.5s_ease-out_${categoryIndex * 0.2 + skillIndex * 0.1}s_forwards]"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                    <span className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-300 block py-2 px-3 rounded-lg bg-gray-700/30 hover:bg-gray-600/40">
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
